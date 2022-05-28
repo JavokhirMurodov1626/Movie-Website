@@ -1,0 +1,16 @@
+import { countBy } from 'lodash';
+import React from 'react';
+
+const TableHeader = ({columns}) => {
+    return ( 
+        <thead>
+          <tr className="table-head">
+              {columns.map(column=>
+                <th key={column.path||column.key}>{column.label}</th>
+                )}
+          </tr> 
+        </thead>
+     );
+}
+ 
+export default TableHeader;
